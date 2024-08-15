@@ -37,7 +37,7 @@ services:
     image: ghcr.io/shair13/gateway:latest
     restart: always
     ports:
-      - "8080:8080"
+      - "20180:8080"
     depends_on:
       eureka-server:
         condition: service_healthy
