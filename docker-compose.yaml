@@ -1,0 +1,43 @@
+services:
+  eureka-server:
+    hostname: eureka-server
+    container_name: eureka-server
+    image: ghcr.io/shair13/eureka-server:latest
+    restart: always
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://eureka-server:8761/actuator/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  data-movie-service:
+    container_name: data-movie-service
+    image: ghcr.io/shair13/data-movie-service:latest
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  external-movie-service:
+    container_name: external-movie-service
+    image: ghcr.io/shair13/external-movie-service:latest
+    restart: always
+    ports:
+      - "8082:8082"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  gateway-api:
+    container_name: gateway-api
+    image: ghcr.io/shair13/gateway:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      eureka-server:
+        condition: service_healthy
