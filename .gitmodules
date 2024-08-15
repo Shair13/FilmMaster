@@ -1,0 +1,12 @@
+[submodule "eureka-server"]
+	path = eureka-server
+	url = https://github.com/Shair13/eureka-server.git
+[submodule "data-movie-service"]
+	path = data-movie-service
+	url = https://github.com/Shair13/data-movie-service.git
+[submodule "external-movie-service"]
+	path = external-movie-service
+	url = https://github.com/Shair13/external-movie-service.git
+[submodule "gateway-api"]
+	path = gateway-api
+	url = https://github.com/Shair13/gateway-api.git
