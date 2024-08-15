@@ -8,9 +8,9 @@ services:
       - "8761:8761"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://eureka-server:8761/actuator/health"]
-      interval: 5s
+      interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 15
 
   data-movie-service:
     container_name: data-movie-service
