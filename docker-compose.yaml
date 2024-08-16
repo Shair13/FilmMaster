@@ -11,6 +11,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 15
+      start_period: 60s
 
   data-movie-service:
     container_name: data-movie-service
@@ -37,7 +38,7 @@ services:
     image: ghcr.io/shair13/gateway:latest
     restart: always
     ports:
-      - "20180:8080"
+      - "8080:8080"
     depends_on:
       eureka-server:
         condition: service_healthy
