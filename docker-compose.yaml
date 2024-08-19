@@ -1,21 +1,23 @@
 services:
   eureka-server:
-    hostname: eureka-server
     container_name: eureka-server
     image: ghcr.io/shair13/eureka-server:latest
     restart: always
     ports:
-      - "8761:8761"
+      - "30180:30180"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://eureka-server:8761/actuator/health"]
-      interval: 10s
+      test: ["CMD", "curl", "-f", "http://eureka-server:30180/actuator/health"]
+      interval: 5s
       timeout: 5s
-      retries: 15
-      start_period: 60s
+      retries: 10
 
   data-movie-service:
     container_name: data-movie-service
     image: ghcr.io/shair13/data-movie-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
     restart: always
     ports:
       - "8081:8081"
@@ -26,6 +28,10 @@ services:
   external-movie-service:
     container_name: external-movie-service
     image: ghcr.io/shair13/external-movie-service:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker      
+      GATEWAY_URL: ${GATEWAY_URL}
+      EUREKA_URL: ${EUREKA_URL}
     restart: always
     ports:
       - "8082:8082"
@@ -36,9 +42,12 @@ services:
   gateway-api:
     container_name: gateway-api
     image: ghcr.io/shair13/gateway:latest
+    environment:
+      SPRING_PROFILES_ACTIVE: docker      
+      EUREKA_URL: ${EUREKA_URL}
     restart: always
     ports:
-      - "8080:8080"
+      - "20180:20180"
     depends_on:
       eureka-server:
         condition: service_healthy
