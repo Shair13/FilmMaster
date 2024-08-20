@@ -97,6 +97,9 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
   and you will receive a token for authorization.
 
 
+# Model Diagrams:
+
+![C4 diagrams](images/FilmMaser%204c.png)
 
     
     
