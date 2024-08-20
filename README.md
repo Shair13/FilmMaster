@@ -33,6 +33,11 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
 
 - **.env file:** Before running docker-compose, ensure you set the database username and password in the .env file.
 
+  ```
+  DB_USERNAME=
+  DB_PASSWORD=
+  ```
+
 - **Run the Application:** in main package run command:
 
    ```bash
