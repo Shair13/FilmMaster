@@ -24,11 +24,11 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
 
   **HTTPS**
    ```
-   git clone https://github.com/Shair13/movie-manager.git
+   git clone https://github.com/Shair13/FilmMaster.git
    ```
   **SSH**
   ```
-   git clone git@github.com:Shair13/movie-manager.git
+   git clone git@github.com:Shair13/FilmMaster.git
   ```
 
 - **.env file:** Before running docker-compose, ensure you set the database username and password in the .env file.
@@ -52,11 +52,11 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
 
   **HTTPS**
     ```
-    git clone --recurse-submodules https://github.com/Shair13/movie-manager.git
+    git clone --recurse-submodules https://github.com/Shair13/FilmMaster.git
     ```
   **SSH**
    ```
-    git clone --recurse-submodules git@github.com:Shair13/movie-manager.git
+    git clone --recurse-submodules git@github.com:Shair13/FilmMaster.git
    ```
 
 - **Build the Application:** Navigate to the main folder that contains all microservices and run:
