@@ -31,6 +31,8 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
    git clone git@github.com:Shair13/movie-manager.git
   ```
 
+- **.env file:** Before running docker-compose, ensure you set the database username and password in the .env file.
+
 - **Run the Application:** in main package run command:
 
    ```bash
