@@ -99,10 +99,4 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
     
     
     
-    
-    
-    
-    
-    
-    
  
