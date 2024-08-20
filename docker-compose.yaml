@@ -33,6 +33,7 @@ services:
       SPRING_PROFILES_ACTIVE: docker      
       GATEWAY_URL: ${GATEWAY_URL}
       EUREKA_URL: ${EUREKA_URL}
+      SWAGGER_URL: ${SWAGGER_URL}
     restart: always
     ports:
       - "8082:8082"
