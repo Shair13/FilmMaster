@@ -34,6 +34,7 @@ services:
       GATEWAY_URL: ${GATEWAY_URL}
       EUREKA_URL: ${EUREKA_URL}
       SWAGGER_URL: ${SWAGGER_URL}
+      CLIENT_SECRET: ${CLIENT_SECRET}
     restart: always
     ports:
       - "8082:8082"
@@ -47,6 +48,7 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker      
       EUREKA_URL: ${EUREKA_URL}
+      CLIENT_SECRET: ${CLIENT_SECRET}
     restart: always
     ports:
       - "20180:20180"
