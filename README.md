@@ -79,8 +79,14 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
    ```
 
 ### IMPORTANT: The DELETE and UPDATE endpoints in the application are secured.
+- To access them, you need to log in with the credentials below:
 
-- To access them, you need to generate a TOKEN. Make a request to the following URL:
+  ```
+  username: user
+  password: password
+  ```
+
+- You can also generate a TOKEN. Make a request to the following URL:
 
     ```
     http://srv29.mikr.us:40053/realms/Shair13/protocol/openid-connect/token
@@ -90,6 +96,7 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
     ```
     * grant_type=password
     * client_id=movie-rest-api
+    * client_secret=mPEQY5rJaAmylsSuU6btHeqv5xrAUp3P
     * username=user
     * password=password
     ```
