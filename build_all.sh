@@ -5,5 +5,7 @@ for module in "${modules[@]}"; do
 done
 
 for module in "${modules[@]}"; do
-  java -jar "$module/target/${module}-0.0.1-SNAPSHOT.jar"
+  java -jar "$module/target/${module}-0.0.1-SNAPSHOT.jar" &
 done
+
+wait
