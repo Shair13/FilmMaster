@@ -108,8 +108,11 @@ http://srv29.mikr.us:20180/swagger-ui/index.html
 
 ![C4 diagrams](images/FilmMaser%204c.png)
 
-    
-    
+# Contact
+
+If you have any questions, feedback or issues, feel free to reach out to me:
+
+- Email: cezary.wozakowski@gmail.com
     
     
     
